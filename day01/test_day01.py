@@ -1,4 +1,4 @@
-from day01 import turn_dial
+from day01 import turn_dial, get_password
 
 
 def test_turn_dial():
@@ -17,3 +17,7 @@ def test_turn_dial_right_edge():
     current_pos = 99
     instruction = 'R1'
     assert turn_dial(current_pos, instruction) == 0
+
+
+def test_get_password():
+    assert get_password('day01_test_input.txt') == 3
