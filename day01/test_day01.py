@@ -1,4 +1,4 @@
-from day01 import turn_dial, get_password
+from day01 import turn_dial, get_password, get_0x_password
 
 
 def test_turn_dial():
@@ -27,5 +27,5 @@ def test_get_password():
     assert get_password('day01_test_input.txt') == 3
 
 
-def test_solve_get_password():
-    print(get_password('day01_input.txt'))
+def test_get_0x_password():
+    assert get_0x_password('day01_test_input.txt') == 6
