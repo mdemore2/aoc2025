@@ -5,12 +5,7 @@ def turn_dial(current_pos: int, instruction: str) -> int:
     else:
         new_pos = current_pos + steps
 
-    if new_pos < 0:
-        new_pos = 100 + new_pos  # double negative
-    elif new_pos > 99:
-        new_pos = new_pos - 100
-
-    return new_pos
+    return new_pos % 100
 
 
 def get_password(input_file: str) -> int:
@@ -25,3 +20,6 @@ def get_password(input_file: str) -> int:
             if current_pos == 0:
                 password += 1
     return password
+
+
+print(get_password('day01_input.txt'))
